@@ -1,0 +1,49 @@
+.navbar {
+    padding: 20px 0;
+    background-color: white;
+}
+
+.nav-logo img {
+    width: 270px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #7FBA00;
+    margin-right: 20px;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #F55D2C;
+    transition: 0.5s;
+}
+
+.login-btn {
+    border: none;
+    background-color: #F55D2C;
+    color: white;
+    padding: 6px 30px;
+    border-radius: 6px;
+}
+
+.login-btn:hover {
+    background-color: #7FBA00;
+    transition: 0.5s;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 576px) {
+    .nav-logo img {
+        width: 220px;
+    }
+
+    .nav-links {
+        padding: 20px 0;
+    }
+
+    .nav-links a {
+        display: block;
+        text-align: center;
+        padding: 5px 0;
+    }
+}
