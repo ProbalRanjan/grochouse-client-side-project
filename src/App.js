@@ -1,6 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Home from './Pages/Home/Home';
 import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
 import Login from './Pages/Login/Login/Login';
@@ -11,6 +10,7 @@ import AddItems from './Pages/AddItems/AddItems/AddItems';
 import MyItems from './Pages/MyItems/MyItems/MyItems';
 import About from './Pages/About/About';
 import Blog from './Pages/Blog/Blog';
+import Home from './Pages/Home/Home/Home';
 
 function App() {
   return (

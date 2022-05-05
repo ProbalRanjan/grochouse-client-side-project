@@ -1,0 +1,38 @@
+.not-found-page {
+    padding: 60px 0;
+}
+
+.not-found-page img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    padding-bottom: 40px;
+}
+
+.not-found-page a {
+    text-decoration: none;
+}
+
+.return-home-button {
+    border: none;
+    background-color: #7FBA00;
+    color: white;
+    padding: 10px 50px;
+    border-radius: 10px;
+}
+
+.return-home-button:hover {
+    background-color: #F55D2C;
+    transition: 0.5s;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 576px) {
+    .not-found-page {
+        padding: 40px 0;
+    }
+
+    .return-home-button {
+        padding: 8px 40px;
+    }
+}
