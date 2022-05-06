@@ -4,7 +4,7 @@ import './TopItems.css'
 const TopItems = () => {
     return (
         <div className='container container-section'>
-            <h1>Top Items</h1>
+            <h3>Top Items</h3>
         </div>
     );
 };
