@@ -1,0 +1,44 @@
+.contact-section {
+    background-color: #7FBA00;
+    padding: 60px 0;
+}
+
+.reach-out {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.reach-out p {
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.contact-btn {
+    border: 0;
+    background-color: #F55D2C;
+    color: white;
+    font-weight: 500;
+    padding: 12px 30px;
+    border-radius: 6px;
+}
+
+.contact-btn:hover {
+    background-color: white;
+    color: #7FBA00;
+    transition: 0.5s;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 576px) {
+    .reach-out {
+        flex-direction: column;
+    }
+
+    .reach-out p {
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+}

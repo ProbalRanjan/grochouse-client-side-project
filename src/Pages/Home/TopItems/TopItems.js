@@ -3,7 +3,7 @@ import './TopItems.css'
 
 const TopItems = () => {
     return (
-        <div className='container container-section'>
+        <div className='container section-container'>
             <h3>Top Items</h3>
         </div>
     );

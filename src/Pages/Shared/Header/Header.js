@@ -31,6 +31,7 @@ const Header = () => {
                                 <Link to='/additems'>Add Items</Link>
                                 <Link to='/myitems'>My Items</Link>
                                 <Link to='/blog'>Blog</Link>
+                                <Link to='/contact'>Contact</Link>
 
                                 {
                                     user ?
