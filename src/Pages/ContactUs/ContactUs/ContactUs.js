@@ -4,7 +4,7 @@ import './ContactUs.css';
 
 const ContactUs = () => {
     return (
-        <div className='container grid-container'>
+        <div className='container my-5 grid-container'>
             <div className='contact-img'>
                 <img src="images/contact-us.png" alt="" />
             </div>

@@ -9,10 +9,10 @@ import ManageItems from './Pages/ManageItems/ManageItems/ManageItems';
 import AddItems from './Pages/AddItems/AddItems/AddItems';
 import MyItems from './Pages/MyItems/MyItems/MyItems';
 import About from './Pages/About/About';
-import Blog from './Pages/Blog/Blog';
 import Home from './Pages/Home/Home/Home';
 import RequireAuth from './Pages/Login/RequireAuth/RequireAuth';
 import ContactUs from './Pages/ContactUs/ContactUs/ContactUs';
+import Blog from './Pages/Blog/Blog/Blog';
 
 function App() {
   return (
