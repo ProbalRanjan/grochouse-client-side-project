@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Form } from 'react-bootstrap';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
@@ -13,15 +13,15 @@ const Login = () => {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [error, setError] = useState('');
     const navigate = useNavigate();
     const location = useLocation();
-    const form = location.state?.form.pathname || '/manageitems';
+    const form = location.state?.form?.pathname || '/manageitems';
 
     const [
         signInWithEmailAndPassword,
         user,
-        loading
+        loading,
+        error
     ] = useSignInWithEmailAndPassword(auth);
 
     const [
@@ -41,7 +41,7 @@ const Login = () => {
         event.preventDefault();
 
         if (error) {
-            setError("Please enter right email or password")
+            return toast("Please enter right email or password")
         }
 
         signInWithEmailAndPassword(email, password);
@@ -50,7 +50,6 @@ const Login = () => {
     // Reset Password
     const handleForgetPass = async () => {
         const inputMail = email;
-
         if (inputMail) {
             await sendPasswordResetEmail(email);
             toast("Please check your email");
@@ -61,9 +60,11 @@ const Login = () => {
     }
 
     // Login user navigate
-    if (user) {
-        navigate(form, { replace: true });
-    }
+    useEffect(() => {
+        if (user) {
+            navigate(form, { replace: true })
+        }
+    })
 
     // Loading Spinner
     if (loading || sending) {

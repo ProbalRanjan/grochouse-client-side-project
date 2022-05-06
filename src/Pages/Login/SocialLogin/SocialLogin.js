@@ -1,13 +1,19 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import { useNavigate } from 'react-router-dom';
 import './SocialLogin.css';
 import Loading from '../../Shared/Loading/Loading';
+import { toast, ToastContainer } from 'react-toastify';
 
 const SocialLogin = () => {
-    const [signInWithGoogle, user, loading] = useSignInWithGoogle(auth);
-    const [error, setError] = useState('');
+    const [
+        signInWithGoogle,
+        user,
+        loading,
+        error
+    ] = useSignInWithGoogle(auth);
+
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -21,8 +27,7 @@ const SocialLogin = () => {
     }
 
     if (error) {
-        setError(error.massage);
-        return;
+        return toast(error.massage);
     }
 
     return (
@@ -34,6 +39,17 @@ const SocialLogin = () => {
                 </button>
             </div>
             <p className='error-message'>{error}</p>
+            <ToastContainer
+                position="top-center"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+            />
         </div>
     );
 };

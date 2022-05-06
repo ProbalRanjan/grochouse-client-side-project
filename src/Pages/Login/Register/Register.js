@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Form } from 'react-bootstrap';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
@@ -15,12 +15,14 @@ const Register = () => {
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const navigate = useNavigate();
+    const location = useLocation();
+    const form = location.state?.form?.pathname || '/manageitems';
 
     const [
         createUserWithEmailAndPassword,
         user,
         loading
-    ] = useCreateUserWithEmailAndPassword(auth);
+    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
     const handleEmailBlur = event => {
         setEmail(event.target.value);
@@ -48,13 +50,14 @@ const Register = () => {
         createUserWithEmailAndPassword(email, password);
     }
 
+    // Sign Up user navigate
     useEffect(() => {
         if (user) {
-            // navigate(from, { replace: true })
-            navigate('/manageitems')
+            navigate(form, { replace: true })
         }
     })
 
+    // Loading Spinner
     if (loading) {
         return <Loading></Loading>;
     }
