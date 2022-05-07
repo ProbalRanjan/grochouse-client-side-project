@@ -1,8 +1,8 @@
 import React from 'react';
 import Contact from '../Contact/Contact';
 import HeroBox from '../HeroBox/HeroBox';
+import TopItems from '../Items/Items/Items';
 import Services from '../Services/Services';
-import TopItems from '../TopItems/TopItems';
 
 const Home = () => {
     return (
