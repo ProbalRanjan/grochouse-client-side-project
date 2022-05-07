@@ -6,7 +6,7 @@ const ContactUs = () => {
     return (
         <div className='container my-5 grid-container'>
             <div className='contact-img'>
-                <img src="images/contact-us.png" alt="" />
+                <img src="images/login-contact/contact-us.png" alt="" />
             </div>
             <div className='contact-form'>
                 <h3>Get in touch</h3>

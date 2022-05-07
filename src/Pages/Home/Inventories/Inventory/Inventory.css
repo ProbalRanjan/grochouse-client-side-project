@@ -1,4 +1,4 @@
-.item {
+.inventory {
     display: grid;
     grid-template-columns: 1fr 2fr;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -6,7 +6,7 @@
     border-radius: 10px;
 }
 
-.item img {
+.inventory img {
     width: 100px;
 }
 

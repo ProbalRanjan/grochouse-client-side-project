@@ -18,7 +18,7 @@ const SocialLogin = () => {
 
     useEffect(() => {
         if (user) {
-            navigate("/manageitems")
+            navigate("/manageinventory")
         }
     });
 

@@ -2,7 +2,7 @@ import React from 'react';
 import About from '../About/About';
 import Contact from '../Contact/Contact';
 import HeroBox from '../HeroBox/HeroBox';
-import TopItems from '../Items/Items/Items';
+import Inventories from '../Inventories/Inventories/Inventories';
 import Services from '../Services/Services';
 
 const Home = () => {
@@ -10,7 +10,7 @@ const Home = () => {
         <div>
             <HeroBox></HeroBox>
             <About></About>
-            <TopItems></TopItems>
+            <Inventories></Inventories>
             <Services></Services>
             <Contact></Contact>
         </div>

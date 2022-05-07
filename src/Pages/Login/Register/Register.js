@@ -16,7 +16,7 @@ const Register = () => {
     const [confirmPassword, setConfirmPassword] = useState('');
     const navigate = useNavigate();
     const location = useLocation();
-    const form = location.state?.form?.pathname || '/manageitems';
+    const form = location.state?.form?.pathname || '/manageinventory';
 
     const [
         createUserWithEmailAndPassword,

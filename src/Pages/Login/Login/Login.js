@@ -15,7 +15,7 @@ const Login = () => {
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
     const location = useLocation();
-    const form = location.state?.form?.pathname || '/manageitems';
+    const form = location.state?.form?.pathname || '/manageinventory';
 
     const [
         signInWithEmailAndPassword,
