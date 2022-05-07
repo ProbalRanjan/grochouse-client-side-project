@@ -8,7 +8,7 @@ const Contact = () => {
             <div className="container reach-out">
                 <p>REACH YOUR DESTINATION 100% SAFE and SECURE</p>
                 <Link to='/contact'>
-                    <button className='contact-btn'>Contact Us</button>
+                    <button className='global-button2'>Contact Us</button>
                 </Link>
             </div>
         </div>

@@ -8,7 +8,7 @@ import PageNotFound from './Pages/Shared/PageNotFound/PageNotFound';
 import ManageItems from './Pages/ManageItems/ManageItems/ManageItems';
 import AddItems from './Pages/AddItems/AddItems/AddItems';
 import MyItems from './Pages/MyItems/MyItems/MyItems';
-import About from './Pages/About/About';
+import AboutUs from './Pages/AboutUs/AboutUs';
 import Home from './Pages/Home/Home/Home';
 import RequireAuth from './Pages/Login/RequireAuth/RequireAuth';
 import ContactUs from './Pages/ContactUs/ContactUs/ContactUs';
@@ -21,7 +21,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
-        <Route path='/about' element={<About></About>}></Route>
+        <Route path='/about' element={<AboutUs></AboutUs>}></Route>
         <Route path='/manageitems' element={
           <RequireAuth>
             <ManageItems></ManageItems>

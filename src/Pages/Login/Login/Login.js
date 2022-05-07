@@ -74,7 +74,7 @@ const Login = () => {
     return (
         <div className='container section-container login-section'>
             <div>
-                <img className='login-img' src="images/login.png" alt="" />
+                <img className='login-img' src="images/login-contact/login.png" alt="" />
             </div>
             <div className='login-form'>
                 <h3>Login to your Account</h3>

@@ -16,7 +16,7 @@
     margin-bottom: 0;
 }
 
-.contact-btn {
+.global-button2 {
     border: 0;
     background-color: #F55D2C;
     color: white;
@@ -25,7 +25,7 @@
     border-radius: 6px;
 }
 
-.contact-btn:hover {
+.global-button2:hover {
     background-color: white;
     color: #7FBA00;
     transition: 0.5s;
@@ -41,4 +41,7 @@
         padding-bottom: 20px;
     }
 
+    .global-button2 {
+        padding: 10px 25px;
+    }
 }
