@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Form } from 'react-bootstrap';
+import { Link, useParams } from 'react-router-dom';
+import './InventoryDetails.css';
 
 const InventoryDetails = () => {
 
@@ -14,8 +16,34 @@ const InventoryDetails = () => {
     }, [id])
 
     return (
-        <div className='container my-5 grid-container'>
-            <h1>hello{inventory.name}</h1>
+        <div className='container my-5 grid-container update-inventory'>
+            <div className='inventory-delivered'>
+                <div className='inventory-info'>
+                    <img src={inventory.img} alt="" />
+                    <h4><span>Name:</span> {inventory.name}</h4>
+                    <p>{inventory.description}</p>
+                    <p><span>Price:</span> ${inventory.price}</p>
+                    <p><span>Supplier:</span> {inventory.supplier}</p>
+                </div>
+                <div className='d-flex justify-content-between align-items-center'>
+                    <p className='mb-0'><span>Stock:</span> {inventory.quantity}</p>
+                    <button className='global-button'>Delivered</button>
+                </div>
+            </div>
+            <div>
+                <Form>
+                    <Form.Group className="mb-4" controlId="formBasicNumber">
+                        <Form.Label>Update Your Stock</Form.Label>
+                        <Form.Control className='input-field' type="number" placeholder="Put a number" required />
+                    </Form.Group>
+
+                    <button className='submit-button'>Update</button>
+                </Form>
+                <p className='alternative py-4'>OR</p>
+                <Link to='/manageinventory'>
+                    <button className='submit-button'>Manage Inventory</button>
+                </Link>
+            </div>
         </div>
     );
 };

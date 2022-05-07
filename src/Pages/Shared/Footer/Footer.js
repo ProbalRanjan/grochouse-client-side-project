@@ -15,7 +15,7 @@ const Footer = () => {
             <div className="container footer-info">
                 <div>
                     <Link className='footer-logo' to='/'>
-                        <img src="images/logo/site-logo2.png" alt="" />
+                        <img src="https://i.ibb.co/8zhn7Zh/site-logo2.png" alt="" />
                     </Link>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum, odio? Repellat rerum aut nulla alias accusantium. </p>
                     <div className='social-media'>

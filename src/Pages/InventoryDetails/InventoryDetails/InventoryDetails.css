@@ -1,0 +1,29 @@
+.update-inventory {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 80px;
+    align-items: center;
+}
+
+.inventory-delivered {
+    background-color: white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 30px;
+    border-radius: 10px;
+    width: 800px;
+}
+
+.inventory-delivered span {
+    font-weight: 600;
+}
+
+.inventory-info img {
+    display: grid;
+    margin: 0 auto;
+    width: 200px;
+    padding-bottom: 20px;
+}
+
+.inventory-info p {
+    margin: 10px 0;
+}

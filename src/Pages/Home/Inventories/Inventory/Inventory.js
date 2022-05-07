@@ -20,7 +20,7 @@ const Inventory = ({ inventory }) => {
                 <p>Price: ${price}</p>
                 <p>Stock: {quantity}</p>
                 <p>Supplier: {supplier}</p>
-                <button onClick={() => handleToInventoryId(_id)}>Update</button>
+                <button className='global-button' onClick={() => handleToInventoryId(_id)}>Update</button>
             </div>
 
         </div>

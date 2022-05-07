@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Form } from 'react-bootstrap';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
@@ -15,8 +15,6 @@ const Register = () => {
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const navigate = useNavigate();
-    const location = useLocation();
-    const form = location.state?.form?.pathname || '/manageinventory';
 
     const [
         createUserWithEmailAndPassword,
@@ -31,6 +29,7 @@ const Register = () => {
     const handlePasswordBlur = event => {
         setPassword(event.target.value);
     }
+
     const handleConfirmPasswordBlur = event => {
         setConfirmPassword(event.target.value);
     }
@@ -53,7 +52,7 @@ const Register = () => {
     // Sign Up user navigate
     useEffect(() => {
         if (user) {
-            navigate(form, { replace: true })
+            navigate('/manageinventory');
         }
     })
 
