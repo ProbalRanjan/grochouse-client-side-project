@@ -27,3 +27,15 @@
 .inventory-info p {
     margin: 10px 0;
 }
+
+
+@media only screen and (min-width: 0px) and (max-width: 576px) {
+    .update-inventory {
+        grid-template-columns: 1fr;
+        grid-gap: 40px;
+    }
+
+    .inventory-delivered {
+        width: auto;
+    }
+}
