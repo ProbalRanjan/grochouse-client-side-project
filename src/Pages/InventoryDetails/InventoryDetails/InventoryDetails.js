@@ -9,11 +9,32 @@ const InventoryDetails = () => {
     const { id } = useParams();
 
     useEffect(() => {
-        const url = `http://localhost:5000/inventory/${id}`
+        const url = `http://localhost:5000/inventory/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setInventory(data))
     }, [id])
+
+
+    const handleDelivered = () => {
+        const newQuantity = (parseInt(inventory.quantity)) - 1;
+
+        const updateInventory = { ...inventory, quantity: newQuantity };
+        setInventory(updateInventory);
+
+
+        fetch(`http://localhost:5000/inventory/${id}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(updateInventory),
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log("Update:", data)
+            })
+    }
 
     return (
         <div className='container my-5 grid-container update-inventory'>
@@ -27,7 +48,7 @@ const InventoryDetails = () => {
                 </div>
                 <div className='d-flex justify-content-between align-items-center'>
                     <p className='mb-0'><span>Stock:</span> {inventory.quantity}</p>
-                    <button className='global-button'>Delivered</button>
+                    <button onClick={() => handleDelivered(id)} className='global-button'>Delivered</button>
                 </div>
             </div>
             <div>
