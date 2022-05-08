@@ -1,0 +1,42 @@
+.table-items img {
+    width: 50px;
+}
+
+.table td,
+th {
+    text-align: center;
+}
+
+.update-button {
+    background-color: #7FBA00;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 6px;
+}
+
+.update-button:hover {
+    background-color: #F55D2C;
+    transition: 0.5s;
+}
+
+.delete-button {
+    background-color: #C70000;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 6px;
+}
+
+.delete-button:hover {
+    background-color: #FE4C4C;
+    transition: 0.5s;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 576px) {
+    .table-btn {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+    }
+}

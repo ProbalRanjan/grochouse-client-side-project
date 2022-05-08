@@ -1,17 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
+import useInventories from '../../../hooks/useInventories/useInventories';
 import Inventory from '../Inventory/Inventory';
 import './Inventories.css';
 
 const Inventories = () => {
 
-    const [inventories, setInventories] = useState([]);
-
-    useEffect(() => {
-        fetch('http://localhost:5000/inventory')
-            .then(res => res.json())
-            .then(data => setInventories(data))
-    })
+    const [inventories] = useInventories();
 
     return (
         <div className='container section-container'>
