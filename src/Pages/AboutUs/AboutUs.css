@@ -1,0 +1,16 @@
+.about-container img {
+    width: 800px;
+    display: grid;
+    margin: 0 auto;
+}
+
+.about-container p {
+    text-align: justify;
+    margin-top: 10px;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 576px) {
+    .about-container img {
+        width: 100%;
+    }
+}
