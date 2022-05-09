@@ -13,7 +13,7 @@ const MyInventory = () => {
     useEffect(() => {
 
         const email = user.email;
-        const url = `http://localhost:5000/myinventory?email=${email}`;
+        const url = `https://frozen-sands-51999.herokuapp.com/myinventory?email=${email}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setMyItems(data))
@@ -30,7 +30,7 @@ const MyInventory = () => {
     const handleDelete = (id) => {
         const proceed = window.confirm('Are you sure?')
         if (proceed) {
-            const url = `http://localhost:5000/inventory/${id}`
+            const url = `https://frozen-sands-51999.herokuapp.com/inventory/${id}`
             fetch(url, {
                 method: 'DELETE'
             })

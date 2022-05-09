@@ -12,7 +12,7 @@ const InventoryDetails = () => {
 
     // Get single inventories
     useEffect(() => {
-        const url = `http://localhost:5000/inventory/${id}`;
+        const url = `https://frozen-sands-51999.herokuapp.com/inventory/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setInventory(data))
@@ -24,7 +24,7 @@ const InventoryDetails = () => {
         const updateInventory = { ...inventory, quantity: newQuantity };
         setInventory(updateInventory);
 
-        fetch(`http://localhost:5000/inventory/${id}`, {
+        fetch(`https://frozen-sands-51999.herokuapp.com/inventory/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -53,7 +53,7 @@ const InventoryDetails = () => {
             toast("Please put you stock inventory first!")
         }
         if (restock > 0) {
-            fetch(`http://localhost:5000/inventory/${id}`, {
+            fetch(`https://frozen-sands-51999.herokuapp.com/inventory/${id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
