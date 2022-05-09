@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import useInventories from '../../../hooks/useInventories/useInventories';
+import useInventories from '../../../../hooks/useInventories/useInventories';
 import Inventory from '../Inventory/Inventory';
 import './Inventories.css';
 

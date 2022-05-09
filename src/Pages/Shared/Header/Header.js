@@ -27,9 +27,15 @@ const Header = () => {
                             <div className="nav-links">
                                 <Link to='/'>Home</Link>
                                 <Link to='/about'>About</Link>
-                                <Link to='/manageinventory'>Manage</Link>
-                                <Link to='/addinventory'>Add Items</Link>
-                                <Link to='/myinventory'>My Items</Link>
+
+                                {
+                                    user && <>
+                                        <Link to='/manageinventory'>Manage Items</Link>
+                                        <Link to='/addinventory'>Add Item</Link>
+                                        <Link to='/myinventory'>My Items</Link>
+                                    </>
+                                }
+
                                 <Link to='/blog'>Blog</Link>
                                 <Link to='/contact'>Contact</Link>
 
@@ -43,6 +49,7 @@ const Header = () => {
                                             <button className='global-button'>Login</button>
                                         </Link>
                                 }
+
                             </div>
                         </Nav>
                     </Navbar.Collapse>

@@ -4,7 +4,7 @@ import auth from '../../../firebase.init';
 import { useLocation, useNavigate } from 'react-router-dom';
 import './SocialLogin.css';
 import Loading from '../../Shared/Loading/Loading';
-import { toast, ToastContainer } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 const SocialLogin = () => {
 
@@ -42,17 +42,6 @@ const SocialLogin = () => {
                 </button>
             </div>
             <p className='error-message'>{error}</p>
-            <ToastContainer
-                position="top-center"
-                autoClose={5000}
-                hideProgressBar={false}
-                newestOnTop={false}
-                closeOnClick
-                rtl={false}
-                pauseOnFocusLoss
-                draggable
-                pauseOnHover
-            />
         </div>
     );
 };

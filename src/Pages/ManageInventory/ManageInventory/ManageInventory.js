@@ -1,13 +1,12 @@
 import React from 'react';
 import { Table } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-import useInventories from '../../hooks/useInventories/useInventories';
+import useInventories from '../../../hooks/useInventories/useInventories';
 import './ManageInventory.css';
 
 const ManageInventory = () => {
 
     const [inventories, setInventories] = useInventories();
-
     const navigate = useNavigate();
 
     const handleToInventoryId = id => {
@@ -22,8 +21,8 @@ const ManageInventory = () => {
                 method: 'DELETE'
             })
                 .then(res => res.json())
-                .then(data => {
-                    console.log(data)
+                .then(() => {
+                    // console.log(data)
                     const remaining = inventories.filter(inventory => inventory._id !== id)
                     setInventories(remaining);
                 })
@@ -59,7 +58,7 @@ const ManageInventory = () => {
                                     <td>{inventory.email}</td>
                                     <td>{inventory.supplier}</td>
                                     <td className='table-btn'>
-                                        <button onClick={() => handleToInventoryId(inventory._id)} className='update-button me-lg-4'> Update</button>
+                                        <button onClick={() => handleToInventoryId(inventory._id)} className='update-button me-lg-4'>Update</button>
                                         <button onClick={() => handleDelete(inventory._id)} className='delete-button ms-lg-4'>Delete</button>
                                     </td>
                                 </tr>

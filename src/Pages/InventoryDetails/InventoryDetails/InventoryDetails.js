@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { Form } from 'react-bootstrap';
 import { Link, useParams } from 'react-router-dom';
-import { toast, ToastContainer } from 'react-toastify';
+import { toast } from 'react-toastify';
 import './InventoryDetails.css';
 
 const InventoryDetails = () => {
 
     const [inventory, setInventory] = useState({});
     const { id } = useParams();
+    const [restock, setRestock] = useState(0);
 
-    // Get all inventories
+    // Get single inventories
     useEffect(() => {
         const url = `http://localhost:5000/inventory/${id}`;
         fetch(url)
@@ -38,8 +39,6 @@ const InventoryDetails = () => {
     }
 
     // Restock Inventory
-    const [restock, setRestock] = useState(0);
-
     const handleRestockChange = event => {
         setRestock(event.target.value);
     }
@@ -64,7 +63,7 @@ const InventoryDetails = () => {
                 .then(res => res.json())
                 .then(() => {
                     // console.log("Delivered:", data)
-                    toast("Thank you for Restocking Inventory")
+                    toast("Thank you for Restocking Inventory");
                 })
         }
     }
@@ -83,17 +82,6 @@ const InventoryDetails = () => {
                     <p className='mb-0'><span>Stock:</span> {inventory.quantity}</p>
                     <button onClick={() => handleDelivered(id)} className='global-button'>Delivered</button>
                 </div>
-                <ToastContainer
-                    position="top-center"
-                    autoClose={5000}
-                    hideProgressBar={false}
-                    newestOnTop={false}
-                    closeOnClick
-                    rtl={false}
-                    pauseOnFocusLoss
-                    draggable
-                    pauseOnHover
-                />
             </div>
             <div>
                 <Form>

@@ -12,13 +12,18 @@
 .inventories-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 40px;
+    grid-gap: 30px;
 }
 
 .manage-btn {
     display: grid;
     margin: 0 auto;
-    margin-top: 20px;
+    margin-top: 30px;
+    background-color: #7FBA00;
+}
+
+.manage-btn:hover {
+    background-color: #F55D2C;
 }
 
 @media only screen and (min-width: 0px) and (max-width: 576px) {
