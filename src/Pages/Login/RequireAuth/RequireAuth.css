@@ -1,0 +1,18 @@
+.email-verify {
+    text-align: center;
+}
+
+.email-verify img {
+    width: 200px;
+}
+
+.email-verify h4 {
+    font-weight: 600;
+}
+
+
+@media only screen and (min-width: 0px) and (max-width: 576px) {
+    .email-verify img {
+        width: 150px;
+    }
+}

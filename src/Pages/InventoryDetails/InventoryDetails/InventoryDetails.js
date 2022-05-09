@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Form } from 'react-bootstrap';
 import { Link, useParams } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
 import './InventoryDetails.css';
 
 const InventoryDetails = () => {
@@ -8,6 +9,7 @@ const InventoryDetails = () => {
     const [inventory, setInventory] = useState({});
     const { id } = useParams();
 
+    // Get all inventories
     useEffect(() => {
         const url = `http://localhost:5000/inventory/${id}`;
         fetch(url)
@@ -15,13 +17,11 @@ const InventoryDetails = () => {
             .then(data => setInventory(data))
     }, [id])
 
-
+    // Delivery Inventory
     const handleDelivered = () => {
-        const newQuantity = (parseInt(inventory.quantity)) - 1;
-
+        const newQuantity = (inventory.quantity) - 1;
         const updateInventory = { ...inventory, quantity: newQuantity };
         setInventory(updateInventory);
-
 
         fetch(`http://localhost:5000/inventory/${id}`, {
             method: 'PUT',
@@ -31,9 +31,42 @@ const InventoryDetails = () => {
             body: JSON.stringify(updateInventory),
         })
             .then(res => res.json())
-            .then(data => {
-                console.log("Update:", data)
+            .then(() => {
+                // console.log("Delivered:", data)
+                toast("Inventory Delivered")
             })
+    }
+
+    // Restock Inventory
+    const [restock, setRestock] = useState(0);
+
+    const handleRestockChange = event => {
+        setRestock(event.target.value);
+    }
+
+    const handleRestock = event => {
+        event.preventDefault();
+        const restockQuantity = inventory.quantity + parseInt(restock);
+        const restockInventory = { ...inventory, quantity: restockQuantity };
+        setInventory(restockInventory);
+
+        if (restock <= 0) {
+            toast("Please put you stock inventory first!")
+        }
+        if (restock > 0) {
+            fetch(`http://localhost:5000/inventory/${id}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(restockInventory),
+            })
+                .then(res => res.json())
+                .then(() => {
+                    // console.log("Delivered:", data)
+                    toast("Thank you for Restocking Inventory")
+                })
+        }
     }
 
     return (
@@ -50,15 +83,26 @@ const InventoryDetails = () => {
                     <p className='mb-0'><span>Stock:</span> {inventory.quantity}</p>
                     <button onClick={() => handleDelivered(id)} className='global-button'>Delivered</button>
                 </div>
+                <ToastContainer
+                    position="top-center"
+                    autoClose={5000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                />
             </div>
             <div>
                 <Form>
                     <Form.Group className="mb-4" controlId="formBasicNumber">
-                        <Form.Label>Update Your Stock</Form.Label>
-                        <Form.Control className='input-field' type="number" placeholder="Put a number" required />
+                        <Form.Label>Restock the Inventory</Form.Label>
+                        <Form.Control onChange={handleRestockChange} className='input-field' name='restock' type="number" placeholder="Put a number" required />
                     </Form.Group>
 
-                    <button className='submit-button'>Update</button>
+                    <button onClick={handleRestock} className='submit-button'>Restock</button>
                 </Form>
                 <p className='alternative py-4'>OR</p>
                 <Link to='/manageinventory'>

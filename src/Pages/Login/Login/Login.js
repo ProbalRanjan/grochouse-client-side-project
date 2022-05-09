@@ -15,7 +15,7 @@ const Login = () => {
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
     const location = useLocation();
-    const form = location.state?.form?.pathname || '/manageinventory';
+    const from = location?.state?.from?.pathname || '/';
 
     const [
         signInWithEmailAndPassword,
@@ -62,7 +62,7 @@ const Login = () => {
     // Login user navigate
     useEffect(() => {
         if (user) {
-            navigate(form, { replace: true })
+            navigate(from, { replace: true });
         }
     })
 
