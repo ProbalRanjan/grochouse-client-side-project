@@ -13,13 +13,21 @@
 }
 
 .question-answer img {
-    width: 100%;
+    width: 90%;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     border-radius: 20px;
 }
 
 .question-answer h3 {
     font-weight: 600;
+}
+
+.question-answer h6 {
+    font-weight: 400;
+}
+
+.question-answer li {
+    padding: 10px 0;
 }
 
 .question-answer span {

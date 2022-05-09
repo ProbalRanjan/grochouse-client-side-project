@@ -17,7 +17,7 @@ const Footer = () => {
                     <Link className='footer-logo' to='/'>
                         <img src="https://i.ibb.co/8zhn7Zh/site-logo2.png" alt="" />
                     </Link>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum, odio? Repellat rerum aut nulla alias accusantium. </p>
+                    <p>The GrocHouse is the most popular inventory website to keep your inventory in trustful warehouse.</p>
                     <div className='social-media'>
                         <h5>Follow Us:</h5>
                         <button>

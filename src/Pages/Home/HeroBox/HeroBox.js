@@ -10,7 +10,7 @@ const HeroBox = () => {
                     <h1>WELCOME TO <br />
                         <span>GROCHOUSE</span>
                     </h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, distinctio! Accusantium, illo dolor voluptates aperiam totam aliquam.</p>
+                    <p>The GrocHouse is the most popular inventory website to keep your inventory in trustful warehouse. On GrocHouse, we provide a unique solution for warehousing space for business and consumers.</p>
                     <Link to='/login'>
                         <button className='global-button'>Login</button>
                     </Link>

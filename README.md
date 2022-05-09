@@ -1,70 +1,42 @@
-# THE GROCHOUSE PROJECT
+# The GrocHouse Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+GrocHouse is the world most fantastic warehousing service provider to keep any kind of grocery inventory in their warehouse. [Please Visit Our Website](https://the-grocery-stock-project.web.app) to add your inventory on our warehouse.
 
-## Available Scripts
+## Our Website Link
 
-In the project directory, you can run:
+[https://the-grocery-stock-project.web.app](https://the-grocery-stock-project.web.app). 
 
-### `npm start`
+## `Features of Website ------`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* In our [Home](https://the-grocery-stock-project.web.app) page you can see the our banner to show who we are. As you can see the about section at the bottom of the banner. You can update your inventory by clicking the Update button and at the bottom you can manage your inventory by clicking Manage Inventory button. And you also can see the our service section and contact us section.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* [About](https://the-grocery-stock-project.web.app/about) page is only for showing our goal, history and our vision. 
 
-### `npm test`
+* In the [Manage Inventory](https://the-grocery-stock-project.web.app/manageinventory) page, You can see the all inventories in our warehouse. Its a private route.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* [Add Inventory](https://the-grocery-stock-project.web.app/addinventory) page is just for adding your inventory.
 
-### `npm run build`
+* [My Inventory](https://the-grocery-stock-project.web.app/myinventory) page is you can see the inventories that you added.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* [Blog](https://the-grocery-stock-project.web.app/blog) page have some question answer.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* You can sign up and sign in on our website on [Login](https://the-grocery-stock-project.web.app/login) page. Also have the option for sign in through social media.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## `Technologies that use for the Website ------`
 
-### `npm run eject`
+**The list of library and framework for the website are --**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* React Library.
+* Express.js
+* Google Firebase.
+* React Firebase Hooks.
+* React Router.
+* MongoDB
+* Toster
+* React Bootstrap.
+* Vanilla CSS.
+* JSX.
+* Fontawesome.
+* Google Fonts.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Thank You.

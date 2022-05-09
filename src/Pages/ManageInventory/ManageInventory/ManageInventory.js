@@ -1,6 +1,6 @@
 import React from 'react';
 import { Table } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import useInventories from '../../../hooks/useInventories/useInventories';
 import './ManageInventory.css';
 
@@ -32,6 +32,11 @@ const ManageInventory = () => {
     return (
         <div className='container section-container'>
             <h3 style={{ fontSize: "36px" }}>Manage Inventories</h3>
+
+            <Link style={{ textDecoration: "none" }} to='/addinventory'>
+                <button className='global-button manage-btn mb-4'>Add New Item</button>
+            </Link>
+
             <div>
                 <Table responsive="sm">
                     <thead>

@@ -14,7 +14,7 @@ const Services = () => {
                     </p>
                     <div>
                         <h5>GROUND TRANSPORT</h5>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est, deleniti.</p>
+                        <p>Land transport is the transport or movement of people, animals or goods from one location to another location on land.</p>
                     </div>
                 </div>
                 <div className='service-section'>
@@ -23,7 +23,7 @@ const Services = () => {
                     </p>
                     <div>
                         <h5>WAREHOUSING</h5>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est, deleniti.</p>
+                        <p>A warehouse is a building for storing goods.</p>
                     </div>
                 </div>
                 <div className='service-section'>
@@ -32,7 +32,7 @@ const Services = () => {
                     </p>
                     <div>
                         <h5>PACKAGING AND STORAGE</h5>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est, deleniti.</p>
+                        <p>Packaging is the science, art and technology of enclosing or protecting products for distribution, storage, sale, and use.</p>
                     </div>
                 </div>
                 <div className='service-section'>
@@ -41,7 +41,7 @@ const Services = () => {
                     </p>
                     <div>
                         <h5>LOGISTIC SERVICE</h5>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est, deleniti.</p>
+                        <p>Logistics is generally the detailed organization and implementation of a complex operation</p>
                     </div>
                 </div>
             </div>
